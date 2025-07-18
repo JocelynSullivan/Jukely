@@ -1,8 +1,8 @@
-type JukelyProp = {
+type JukelyLogoProp = {
   className?: string;
 };
 
-const JukelyLogo: React.FC<JukelyProp> = ({ className }) => {
+const JukelyLogo: React.FC<JukelyLogoProp> = ({ className }) => {
   return (
     <svg
       className={className}

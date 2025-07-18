@@ -1,5 +1,5 @@
-import LoginLogo from "./components/LoginLogo";
-import LoginTwinkles from "./components/LoginTwinkles";
+import LoginLogo from "../components/LoginLogo";
+import LoginTwinkles from "../components/LoginTwinkles";
 
 function Login() {
   return (

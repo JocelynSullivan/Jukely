@@ -1,10 +1,11 @@
-import NavBar from "./components/NavBar";
-import Login from "./Login";
+import Login from "./pages/Login";
+import Library from "./pages/Library";
 
 function App() {
   return (
     <>
-      <Login />
+      {/* <Login /> */}
+      <Library />
     </>
   );
 }

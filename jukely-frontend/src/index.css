@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import "tailwindcss";
 
 @theme {
   --color-blue: #1505f5;
+  --color-lightblue: #32ade6;
+  --color-darkblue: #061120;
   --color-pink: #ff00d9;
+  --font-display: "Nunito";
 }
 
 @font-face {
-  font-family: Nunito, sans-serif;
-  font-weight: 200 1000;
-  src: url("https://fonts.googleapis.com/css?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+  font-family: "Nunito";
+  src: local("Nunito"),
+    url(./assets/Nunito/Nunito-VariableFont_wght.ttf) format("ttf");
 }
 
 body {
@@ -17,5 +19,5 @@ body {
 }
 
 h1 {
-  font-family: "Nunito";
+  /* font-family: "Nunito"; */
 }
