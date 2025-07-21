@@ -31,8 +31,8 @@ const ViewQueueIcon: React.FC<ViewQueueIconProp> = ({ className }) => {
             y2="150"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F79461" />
-            <stop offset="1" stop-color="#F15B59" />
+            <stop stop-color="#32ade6" />
+            <stop offset="1" stop-color="#061120" />
           </linearGradient>
           <clipPath id="clip0_395_1102">
             <rect

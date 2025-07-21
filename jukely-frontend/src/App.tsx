@@ -1,11 +1,21 @@
 import Login from "./pages/Login";
-import Library from "./pages/Library";
+import NavBar from "./components/NavBar";
+import SearchBar from "./components/SearchBar";
+import PlayBar from "./components/PlayBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       {/* <Login /> */}
-      <Library />
+      <main className="flex flex-row">
+        <NavBar />
+        <div className="flex flex-col">
+          <SearchBar />
+          <Outlet />
+        </div>
+      </main>
+      <PlayBar />
     </>
   );
 }

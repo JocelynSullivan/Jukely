@@ -1,20 +1,40 @@
+import { Link } from "react-router-dom";
+
 function LibraryNav() {
   return (
     <>
-      <div className="sticky top-0 flex flex-row text-white px-7 p-7 bg-black">
+      <div className="flex flex-row text-white px-7 p-7 bg-black">
         <div className="px-4">
-          <p className="self-center p-1 px-5 bg-darkblue rounded-xl">
+          <Link
+            to={"/library/playlist"}
+            className="self-center p-1 px-5 bg-darkblue rounded-xl"
+          >
             Playlist
-          </p>
+          </Link>
         </div>
         <div className="px-4">
-          <p className="self-center p-1 px-5 bg-darkblue rounded-xl">Album</p>
+          <Link
+            to={"/library/album"}
+            className="self-center p-1 px-5 bg-darkblue rounded-xl"
+          >
+            Album
+          </Link>
         </div>
         <div className="px-4">
-          <p className="self-center p-1 px-5 bg-darkblue rounded-xl">Artist</p>
+          <Link
+            to={"/library/artist"}
+            className="self-center p-1 px-5 bg-darkblue rounded-xl"
+          >
+            Artist
+          </Link>
         </div>
         <div className="px-4">
-          <p className="self-center p-1 px-5 bg-darkblue rounded-xl">Podcast</p>
+          <Link
+            to={"/library/podcast"}
+            className="self-center p-1 px-5 bg-darkblue rounded-xl"
+          >
+            Podcast
+          </Link>
         </div>
       </div>
     </>
