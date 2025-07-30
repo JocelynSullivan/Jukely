@@ -24,6 +24,10 @@ type TrackResponse = {
   };
 };
 
+// function millisToMinutesAndSeconds({track.duration_ms}:TrackResponse) {
+//   let minutes =
+// }
+
 function Playlist() {
   const [tracks, setTracks] = useState<TrackResponse[]>();
   const { playlist } = useParams();
@@ -61,18 +65,18 @@ function Playlist() {
 
   return (
     <>
-      <div className=" bg-linear-to-t from-black to-lightblue h-150 w-full p-15">
+      <div className=" bg-linear-to-t from-black to-lightblue h-150 w-full p-15 rounded-xl">
         <div className="flex flex-col">
           <div className="flex justify-center">
             <div>
               <PlaylistImg playlist_id={playlist} />
               <div className="flex justify-center pt-5">
-                <h1 className="text-white ">Goblin Playlist</h1>
+                <h1 className="text-white ">Playlist</h1>
               </div>
             </div>
           </div>
           <div className="flex flex-row justify-center">
-            <p className="text-white p-2 pb-10">xx tracks</p>
+            <p className="text-white p-2 pb-10">#of tracks</p>
             <p className="text-white p-2">runtime</p>
           </div>
         </div>

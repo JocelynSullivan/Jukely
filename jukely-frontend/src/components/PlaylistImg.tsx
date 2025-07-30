@@ -16,7 +16,9 @@ const PlaylistImg: React.FC<PlaylistImgProps> = () => {
 
       try {
         let json: PlaylistImgProps[];
-        if (import.meta.env.VITE_USE_DUMMY_DATA === "true") {
+        // if (import.meta.env.VITE_USE_DUMMY_DATA === "true") {
+        // prevent spamming API
+        if (false) {
           const response = await fetch(url, {
             headers: {
               Authorization: `Bearer ${
