@@ -16,7 +16,7 @@ const RecommendedIcon: React.FC<RecommendedIconProp> = ({ className }) => {
           d="M140 0H10C4.47715 0 0 4.47715 0 10V140C0 145.523 4.47715 150 10 150H140C145.523 150 150 145.523 150 140V10C150 4.47715 145.523 0 140 0Z"
           fill="url(#paint0_linear_395_1103)"
         />
-        <g clip-path="url(#clip0_395_1103)">
+        <g clipPath="url(#clip0_395_1103)">
           <path
             d="M74.5379 34.0022C46.4417 34.2704 24 59.3722 24 89.6094V111.336C24 113.913 25.9396 116 28.3351 116H39.1699C39.1699 116 39.2003 115.987 39.2003 115.967V89.4982C39.2003 68.3413 54.814 50.6713 74.4771 50.3638C94.4564 50.0563 110.8 67.4581 110.8 88.8767V115.961C110.8 115.961 110.812 115.993 110.83 115.993H121.549C124.006 115.993 126 113.848 126 111.205V88.8767C126 58.4563 102.877 33.7339 74.5379 34.0022Z"
             fill="#EEE5E5"
@@ -35,8 +35,8 @@ const RecommendedIcon: React.FC<RecommendedIconProp> = ({ className }) => {
             y2="150"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#32ade6" />
-            <stop offset="1" stop-color="#061120" />
+            <stop stopColor="#32ade6" />
+            <stop offset="1" stopColor="#061120" />
           </linearGradient>
           <clipPath id="clip0_395_1103">
             <rect

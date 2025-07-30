@@ -6,10 +6,10 @@ function LibraryNav() {
       <div className="flex flex-row text-white px-7 p-7 bg-black">
         <div className="px-4">
           <Link
-            to={"/library/playlist"}
+            to={"/library/playlists"}
             className="self-center p-1 px-5 bg-darkblue rounded-xl"
           >
-            Playlist
+            Playlists
           </Link>
         </div>
         <div className="px-4">
@@ -17,7 +17,7 @@ function LibraryNav() {
             to={"/library/album"}
             className="self-center p-1 px-5 bg-darkblue rounded-xl"
           >
-            Album
+            Albums
           </Link>
         </div>
         <div className="px-4">
@@ -25,7 +25,7 @@ function LibraryNav() {
             to={"/library/artist"}
             className="self-center p-1 px-5 bg-darkblue rounded-xl"
           >
-            Artist
+            Artists
           </Link>
         </div>
         <div className="px-4">

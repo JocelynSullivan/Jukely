@@ -10,12 +10,14 @@ function App() {
       {/* <Login /> */}
       <main className="flex flex-row">
         <NavBar />
-        <div className="flex flex-col">
-          <SearchBar />
+        <div className="flex flex-col overscroll-none">
+          <div className="w-screen">
+            <SearchBar />
+          </div>
           <Outlet />
         </div>
       </main>
-      <PlayBar />
+      {/* <PlayBar /> */}
     </>
   );
 }
