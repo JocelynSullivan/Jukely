@@ -56,7 +56,7 @@ function LibraryPlaylist() {
 
   return (
     <>
-      {playlists &&
+      {playlists ? (
         playlists.items.map((playlist, i) => (
           <Link
             key={i}
@@ -74,7 +74,12 @@ function LibraryPlaylist() {
               url={playlist.images[0].url}
             />
           </Link>
-        ))}
+        ))
+      ) : (
+        <p className="text-white m-10 p-10 border-3 border-darkblue rounded-2xl">
+          No Playlists Available
+        </p>
+      )}
     </>
   );
 }
