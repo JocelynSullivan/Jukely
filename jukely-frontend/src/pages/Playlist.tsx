@@ -2,7 +2,7 @@ import PlaylistImg from "../components/PlaylistImg";
 import Track from "../components/Track";
 import { dummyTrackResponse } from "../TestResponse/track-dummy-response";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 type TrackResponse = {
   track: {
@@ -24,6 +24,11 @@ type TrackResponse = {
   };
 };
 
+type PlaylistProps = {
+  name: string;
+  num_tracks: number;
+};
+
 // function millisToMinutesAndSeconds({track.duration_ms}:TrackResponse) {
 //   let minutes =
 // }
@@ -31,6 +36,7 @@ type TrackResponse = {
 function Playlist() {
   const [tracks, setTracks] = useState<TrackResponse[]>();
   const { playlist } = useParams();
+  const location = useLocation();
 
   useEffect(() => {
     async function getTracks() {
@@ -62,6 +68,7 @@ function Playlist() {
     }
     getTracks();
   }, []);
+  const { name, num_tracks } = location.state as PlaylistProps;
 
   return (
     <div className=" bg-linear-to-t from-black to-lightblue w-full p-15 rounded-xl">
@@ -70,12 +77,12 @@ function Playlist() {
           <div>
             <PlaylistImg />
             <div className="flex justify-center pt-5">
-              <h1 className="text-white ">Playlist</h1>
+              <h1 className="text-white ">{name}</h1>
             </div>
           </div>
         </div>
         <div className="flex flex-row justify-center">
-          <p className="text-white p-2 pb-10">#of tracks</p>
+          <p className="text-white p-2 pb-10">{num_tracks}</p>
           <p className="text-white p-2">runtime</p>
         </div>
       </div>

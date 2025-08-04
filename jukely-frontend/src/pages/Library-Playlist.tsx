@@ -58,7 +58,11 @@ function LibraryPlaylist() {
     <>
       {playlists &&
         playlists.items.map((playlist, i) => (
-          <Link key={i} to={`/library/playlists/${playlist.id}`}>
+          <Link
+            key={i}
+            to={`/library/playlists/${playlist.id}`}
+            state={{ name: playlist.name, num_tracks: playlist.tracks.total }}
+          >
             <PlaylistCard
               name={playlist.name}
               tracks={playlist.tracks.total}
