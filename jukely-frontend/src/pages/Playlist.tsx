@@ -30,9 +30,10 @@ type PlaylistProps = {
   url: string;
 };
 
-// function millisToMinutesAndSeconds({track.duration_ms}:TrackResponse) {
-//   let minutes =
-// }
+function millisToMinutesAndSeconds(duration_ms: number) {
+  const date = new Date(duration_ms);
+  return `${date.getMinutes()}:${date.getSeconds()}`;
+}
 
 function Playlist() {
   const [tracks, setTracks] = useState<TrackResponse[]>();
@@ -72,7 +73,7 @@ function Playlist() {
   const { name, num_tracks, url } = location.state as PlaylistProps;
 
   return (
-    <div className=" bg-linear-to-t from-black to-lightblue w-full p-15 rounded-xl">
+    <div className=" bg-linear-to-b from-black from-1% to-lightblue to-99% w-full px-15 py-10 rounded-xl">
       <div className="flex flex-col">
         <div className="flex justify-center">
           <div>
@@ -93,7 +94,7 @@ function Playlist() {
               key={i}
               title={track.track.name}
               artist={track.track.artists[0].name}
-              duration={track.track.duration_ms}
+              duration={millisToMinutesAndSeconds(track.track.duration_ms)}
             />
           ))}
       </div>

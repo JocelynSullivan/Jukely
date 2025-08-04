@@ -3,7 +3,7 @@ import PlayButton from "./PlayButton";
 type TrackProps = {
   title: string;
   artist: string;
-  duration: number;
+  duration: string;
 };
 
 function Track({ title, artist, duration }: TrackProps) {
