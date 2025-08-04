@@ -1,5 +1,5 @@
 import PlaylistCard from "../components/PlaylistCard";
-import { dummyPlaylistResponse } from "../TestResponse/playlist-dummy-response";
+import { dummyResponse } from "../TestResponse/library-playlist-dummy-response";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -29,7 +29,7 @@ function LibraryPlaylist() {
 
       try {
         let json;
-        if (import.meta.env.VITE_USE_DUMMY_DATA === "true") {
+        if (import.meta.env.VITE_USE_DUMMY_DATA !== "true") {
           const response = await fetch(url, {
             headers: {
               Authorization: `Bearer ${
@@ -43,7 +43,7 @@ function LibraryPlaylist() {
 
           json = await response.json();
         } else {
-          json = dummyPlaylistResponse;
+          json = dummyResponse;
         }
 
         setPlaylists(json);

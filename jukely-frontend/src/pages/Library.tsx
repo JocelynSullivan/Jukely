@@ -4,14 +4,10 @@ import { Outlet } from "react-router-dom";
 
 function Library() {
   return (
-    <div>
+    <div className="flex flex-col">
       <LibraryNav />
-      <section className="px-10">
-        <div className="flex flex-wrap pb-10 pr-10">
-          <Outlet />
-        </div>
-      </section>
-      <section className="px-15">
+      <section className="flex flex-wrap pb-10 pr-10 px-10">
+        <Outlet />
         <SongNav />
       </section>
     </div>

@@ -10,8 +10,8 @@ function PodcastCard() {
             <div className="pl-5">
               <p className="text-white py-2">Talk Tuah</p>
               <div className="flex flex-row ">
-                <p className="text-white text-[.5rem]">xx eps</p>
-                <p className="text-white text-[.5rem] pl-7"># of mins</p>
+                <p className="text-white text-[.5rem]">20 episodes</p>
+                <p className="text-white text-[.5rem] pl-7">57 mins</p>
               </div>
             </div>
           </div>

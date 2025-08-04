@@ -33,7 +33,7 @@ function LibraryNav() {
             to={"/library/podcast"}
             className="self-center p-1 px-5 bg-darkblue rounded-xl"
           >
-            Podcast
+            Podcasts
           </Link>
         </div>
       </div>

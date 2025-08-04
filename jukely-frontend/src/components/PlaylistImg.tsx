@@ -16,7 +16,7 @@ const PlaylistImg: React.FC<PlaylistImgProps> = () => {
 
       try {
         let json: PlaylistImgProps[];
-        // if (import.meta.env.VITE_USE_DUMMY_DATA === "true") {
+        // if (import.meta.env.VITE_USE_DUMMY_DATA !== "true") {
         // prevent spamming API
         if (false) {
           const response = await fetch(url, {
@@ -33,7 +33,7 @@ const PlaylistImg: React.FC<PlaylistImgProps> = () => {
         } else {
           json = [
             {
-              url: "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228",
+              url: "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da845568019adfaa98c181f5d3ec",
               height: 300,
               width: 300,
             },

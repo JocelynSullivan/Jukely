@@ -38,7 +38,7 @@ function Playlist() {
 
       try {
         let json;
-        if (import.meta.env.VITE_USE_DUMMY_DATA === "true") {
+        if (import.meta.env.VITE_USE_DUMMY_DATA !== "true") {
           const response = await fetch(url, {
             headers: {
               Authorization: `Bearer ${
@@ -64,35 +64,33 @@ function Playlist() {
   }, []);
 
   return (
-    <>
-      <div className=" bg-linear-to-t from-black to-lightblue h-150 w-full p-15 rounded-xl">
-        <div className="flex flex-col">
-          <div className="flex justify-center">
-            <div>
-              <PlaylistImg playlist_id={playlist} />
-              <div className="flex justify-center pt-5">
-                <h1 className="text-white ">Playlist</h1>
-              </div>
+    <div className=" bg-linear-to-t from-black to-lightblue w-full p-15 rounded-xl">
+      <div className="flex flex-col">
+        <div className="flex justify-center">
+          <div>
+            <PlaylistImg />
+            <div className="flex justify-center pt-5">
+              <h1 className="text-white ">Playlist</h1>
             </div>
           </div>
-          <div className="flex flex-row justify-center">
-            <p className="text-white p-2 pb-10">#of tracks</p>
-            <p className="text-white p-2">runtime</p>
-          </div>
         </div>
-        <div className="">
-          {tracks &&
-            tracks.map((track, i) => (
-              <Track
-                key={i}
-                title={track.track.name}
-                artist={track.track.artists[0].name}
-                duration={track.track.duration_ms}
-              />
-            ))}
+        <div className="flex flex-row justify-center">
+          <p className="text-white p-2 pb-10">#of tracks</p>
+          <p className="text-white p-2">runtime</p>
         </div>
       </div>
-    </>
+      <div className="">
+        {tracks &&
+          tracks.map((track, i) => (
+            <Track
+              key={i}
+              title={track.track.name}
+              artist={track.track.artists[0].name}
+              duration={track.track.duration_ms}
+            />
+          ))}
+      </div>
+    </div>
   );
 }
 
