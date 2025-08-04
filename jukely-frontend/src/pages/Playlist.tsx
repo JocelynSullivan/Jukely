@@ -27,6 +27,7 @@ type TrackResponse = {
 type PlaylistProps = {
   name: string;
   num_tracks: number;
+  url: string;
 };
 
 // function millisToMinutesAndSeconds({track.duration_ms}:TrackResponse) {
@@ -68,22 +69,21 @@ function Playlist() {
     }
     getTracks();
   }, []);
-  const { name, num_tracks } = location.state as PlaylistProps;
+  const { name, num_tracks, url } = location.state as PlaylistProps;
 
   return (
     <div className=" bg-linear-to-t from-black to-lightblue w-full p-15 rounded-xl">
       <div className="flex flex-col">
         <div className="flex justify-center">
           <div>
-            <PlaylistImg />
-            <div className="flex justify-center pt-5">
+            <PlaylistImg url={url} />
+            <div className="flex justify-center pt-3">
               <h1 className="text-white ">{name}</h1>
             </div>
           </div>
         </div>
         <div className="flex flex-row justify-center">
-          <p className="text-white p-2 pb-10">{num_tracks}</p>
-          <p className="text-white p-2">runtime</p>
+          <p className="text-white text-[.75em] pb-10">{num_tracks} songs</p>
         </div>
       </div>
       <div className="">

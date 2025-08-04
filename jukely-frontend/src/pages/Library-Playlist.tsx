@@ -61,7 +61,11 @@ function LibraryPlaylist() {
           <Link
             key={i}
             to={`/library/playlists/${playlist.id}`}
-            state={{ name: playlist.name, num_tracks: playlist.tracks.total }}
+            state={{
+              name: playlist.name,
+              num_tracks: playlist.tracks.total,
+              url: playlist.images[0].url,
+            }}
           >
             <PlaylistCard
               name={playlist.name}
