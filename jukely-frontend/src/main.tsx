@@ -8,6 +8,7 @@ import LibraryAlbum from "./pages/Library-Album.tsx";
 import LibraryArtist from "./pages/Library-Artist.tsx";
 import LibraryPodcast from "./pages/Library-Podcast.tsx";
 import Library from "./pages/Library.tsx";
+import Login from "./pages/Login.tsx";
 import Playlist from "./pages/Playlist.tsx";
 
 createRoot(document.getElementById("root")!).render(
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="playlists/:playlist" element={<Playlist />} />
           </Route>
         </Route>
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

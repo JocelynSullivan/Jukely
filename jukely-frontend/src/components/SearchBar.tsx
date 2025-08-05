@@ -2,8 +2,11 @@ import SearchIcon from "./SearchIcon";
 import SettingsIcon from "./SettingsIcon";
 import Refresh from "./Refresh";
 import Account from "./Account";
+import useLocalStorage from "use-local-storage";
 
 function SearchBar() {
+  const [login, setLogin] = useLocalStorage<boolean>("isLoggedIn");
+
   return (
     <main className="sticky top-0 border-b-3 border-darkblue bg-black w-fill">
       <div className="flex flex-row justify-between p-3.5">
@@ -18,7 +21,12 @@ function SearchBar() {
           <div className="px-3">
             <SettingsIcon />
           </div>
-          <div className="px-3">
+          <div
+            className="px-3"
+            onClick={() => {
+              setLogin(false);
+            }}
+          >
             <Account />
           </div>
         </nav>

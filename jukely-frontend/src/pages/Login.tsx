@@ -1,7 +1,12 @@
 import LoginLogo from "../components/LoginLogo";
 import LoginTwinkles from "../components/LoginTwinkles";
+import useLocalStorage from "use-local-storage";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const [login, setLogin] = useLocalStorage<boolean>("isLoggedIn");
+  const navigate = useNavigate();
+
   return (
     <>
       <div className=" bg-linear-to-t from-blue to-black h-screen">
@@ -11,7 +16,7 @@ function Login() {
         <div className="flex justify-center">
           <div className="bg-black px-60 pt-20 pb-9">
             <div className="flex justify-center pb-1">
-              <LoginLogo className="fill-blue" />
+              <LoginLogo className="fill-lightblue" />
             </div>
             <div>
               <p className="flex justify-center text-pink">
@@ -19,17 +24,23 @@ function Login() {
               </p>
             </div>
             <div className="pt-15">
-              <p className="flex justify-center border-2 border-blue rounded-sm text-blue-700 p-1.5">
+              <p className="flex justify-center border-2 border-lightblue rounded-sm text-gray-700 p-1.5">
                 Username
               </p>
             </div>
             <div className="pt-7">
-              <p className="flex justify-center border-2 border-blue rounded-sm text-blue-700 p-1.5">
+              <p className="flex justify-center border-2 border-lightblue rounded-sm text-gray-700 p-1.5">
                 Password
               </p>
             </div>
             <div className="pt-10 px-1">
-              <p className="flex justify-center bg-blue rounded-full text-black p-1.5">
+              <p
+                onClick={() => {
+                  setLogin(true);
+                  navigate("/");
+                }}
+                className="flex justify-center bg-lightblue rounded-full text-black p-1.5"
+              >
                 Log In
               </p>
               <div className="flex justify-center pt-15">
