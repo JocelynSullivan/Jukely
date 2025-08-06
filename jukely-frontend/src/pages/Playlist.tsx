@@ -73,7 +73,7 @@ function Playlist() {
   const { name, num_tracks, url } = location.state as PlaylistProps;
 
   return (
-    <div className=" bg-linear-to-b from-darkblue from-5% via-black via-15% to-lightblue to-80% w-full px-15 py-10 rounded-xl">
+    <div className=" bg-linear-to-b from-darkblue from-5% via-black via-15% to-[#2482ad] to-80% w-full px-15 py-10 rounded-xl">
       <div className="flex flex-col">
         <div className="flex justify-center">
           <div>

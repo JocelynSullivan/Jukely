@@ -70,7 +70,7 @@ function LibraryPlaylist() {
             <PlaylistCard
               name={playlist.name}
               tracks={playlist.tracks.total}
-              runtime={"none"}
+              runtime={""}
               url={playlist.images[0].url}
             />
           </Link>
