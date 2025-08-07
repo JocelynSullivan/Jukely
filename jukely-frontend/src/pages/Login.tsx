@@ -9,12 +9,12 @@ function Login() {
 
   return (
     <>
-      <div className=" bg-linear-to-t from-blue to-black h-screen">
+      <div className=" bg-linear-to-t from-blue to-black to-90% h-screen">
         <div className="flex justify-center">
           <LoginTwinkles />
         </div>
         <div className="flex justify-center">
-          <div className="bg-black px-60 pt-20 pb-9">
+          <div className="bg-black px-60 pt-20 pb-9 rounded-3xl">
             <div className="flex justify-center pb-1">
               <LoginLogo className="fill-lightblue" />
             </div>
