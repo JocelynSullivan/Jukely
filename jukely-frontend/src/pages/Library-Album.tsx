@@ -1,5 +1,5 @@
 import AlbumCard from "../components/AlbumCard";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 type SpotifyAlbumResponse = {
   items: {
